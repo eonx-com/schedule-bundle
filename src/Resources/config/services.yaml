@@ -1,0 +1,20 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    LoyaltyCorp\ScheduleBundle\Command\ScheduleRunCommand: ~
+
+    LoyaltyCorp\ScheduleBundle\DataCollector\ScheduleDataCollector:
+        tags:
+            -
+                name: data_collector
+                template: '@Schedule/Collector/schedule_collector.html.twig'
+                id: !php/const LoyaltyCorp\ScheduleBundle\DataCollector\ScheduleDataCollector::NAME
+
+    LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface:
+        class: LoyaltyCorp\ScheduleBundle\Schedule
+
+    LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleRunnerInterface:
+        class: LoyaltyCorp\ScheduleBundle\ScheduleRunner
