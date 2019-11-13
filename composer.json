@@ -10,7 +10,7 @@
     },
     "require-dev": {
         "symfony/symfony": "^4.3",
-        "loyaltycorp/core-bundle": "^0.0.4"
+        "loyaltycorp/core-bundle": "^0.1"
     },
     "autoload": {
         "psr-4": {
