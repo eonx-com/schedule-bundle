@@ -1,16 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\ScheduleBundle;
+namespace EonX\ScheduleBundle;
 
-use LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
-use LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface;
-use LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleRunnerInterface;
+use EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
+use EonX\ScheduleBundle\Interfaces\ScheduleInterface;
+use EonX\ScheduleBundle\Interfaces\ScheduleRunnerInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 final class ScheduleRunner implements ScheduleRunnerInterface
 {
-    /** @var \LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface */
+    /** @var \EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface */
     private $lockService;
 
     /** @var bool */
@@ -19,7 +19,7 @@ final class ScheduleRunner implements ScheduleRunnerInterface
     /**
      * ScheduleRunner constructor.
      *
-     * @param \LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface $lockService
+     * @param \EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface $lockService
      */
     public function __construct(LockServiceInterface $lockService)
     {
@@ -29,7 +29,7 @@ final class ScheduleRunner implements ScheduleRunnerInterface
     /**
      * Run given schedule and display to given output.
      *
-     * @param \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface $schedule
+     * @param \EonX\ScheduleBundle\Interfaces\ScheduleInterface $schedule
      * @param \Symfony\Component\Console\Output\OutputInterface $output
      *
      * @return void
@@ -71,9 +71,9 @@ final class ScheduleRunner implements ScheduleRunnerInterface
     /**
      * Set lock service.
      *
-     * @param \LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface $lockService
+     * @param \EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface $lockService
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleRunnerInterface
+     * @return \EonX\ScheduleBundle\Interfaces\ScheduleRunnerInterface
      */
     public function setLockService(LockServiceInterface $lockService): ScheduleRunnerInterface
     {

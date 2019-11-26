@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\ScheduleBundle\Interfaces;
+namespace EonX\ScheduleBundle\Interfaces;
 
-use LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
+use EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 interface ScheduleRunnerInterface
@@ -11,7 +11,7 @@ interface ScheduleRunnerInterface
     /**
      * Run given schedule and display to given output.
      *
-     * @param \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface $schedule
+     * @param \EonX\ScheduleBundle\Interfaces\ScheduleInterface $schedule
      * @param \Symfony\Component\Console\Output\OutputInterface $output
      *
      * @return void
@@ -21,9 +21,9 @@ interface ScheduleRunnerInterface
     /**
      * Set lock service.
      *
-     * @param \LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface $lockService
+     * @param \EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface $lockService
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleRunnerInterface
+     * @return \EonX\ScheduleBundle\Interfaces\ScheduleRunnerInterface
      */
     public function setLockService(LockServiceInterface $lockService): self;
 }

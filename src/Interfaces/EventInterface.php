@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\ScheduleBundle\Interfaces;
+namespace EonX\ScheduleBundle\Interfaces;
 
 use Symfony\Component\Console\Application;
 
@@ -28,7 +28,7 @@ interface EventInterface
      *
      * @param callable $func
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface
      */
     public function before(callable $func): self;
 
@@ -235,7 +235,7 @@ interface EventInterface
      *
      * @param null|bool $allowOverlapping
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface
      */
     public function setAllowOverlapping(?bool $allowOverlapping = null): self;
 
@@ -244,7 +244,7 @@ interface EventInterface
      *
      * @param float $seconds
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface
      */
     public function setMaxLockTime(float $seconds): self;
 
@@ -288,7 +288,7 @@ interface EventInterface
      *
      * @param callable $func
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface
      */
     public function then(callable $func): self;
 

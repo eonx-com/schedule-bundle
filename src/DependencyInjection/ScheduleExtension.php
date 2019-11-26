@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\ScheduleBundle\DependencyInjection;
+namespace EonX\ScheduleBundle\DependencyInjection;
 
-use LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleProviderInterface;
+use EonX\ScheduleBundle\Interfaces\ScheduleProviderInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;

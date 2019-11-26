@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\ScheduleBundle\DependencyInjection\Compiler;
+namespace EonX\ScheduleBundle\DependencyInjection\Compiler;
 
-use LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface;
-use LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleProviderInterface;
-use LoyaltyCorp\ScheduleBundle\Interfaces\TraceableScheduleInterface;
-use LoyaltyCorp\ScheduleBundle\TraceableSchedule;
+use EonX\ScheduleBundle\Interfaces\ScheduleInterface;
+use EonX\ScheduleBundle\Interfaces\ScheduleProviderInterface;
+use EonX\ScheduleBundle\Interfaces\TraceableScheduleInterface;
+use EonX\ScheduleBundle\TraceableSchedule;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;

@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\ScheduleBundle\DataCollector;
+namespace EonX\ScheduleBundle\DataCollector;
 
-use LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface;
-use LoyaltyCorp\ScheduleBundle\Interfaces\TraceableScheduleInterface;
+use EonX\ScheduleBundle\Interfaces\ScheduleInterface;
+use EonX\ScheduleBundle\Interfaces\TraceableScheduleInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\DataCollector\DataCollector;
@@ -14,13 +14,13 @@ final class ScheduleDataCollector extends DataCollector
     /** @var string */
     public const NAME = 'schedule.schedule_collector';
 
-    /** @var \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface */
+    /** @var \EonX\ScheduleBundle\Interfaces\ScheduleInterface */
     private $schedule;
 
     /**
      * ScheduleDataCollector constructor.
      *
-     * @param \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface $schedule
+     * @param \EonX\ScheduleBundle\Interfaces\ScheduleInterface $schedule
      */
     public function __construct(ScheduleInterface $schedule)
     {
@@ -38,7 +38,7 @@ final class ScheduleDataCollector extends DataCollector
             return;
         }
 
-        /** @var \LoyaltyCorp\ScheduleBundle\Interfaces\TraceableScheduleInterface $schedule */
+        /** @var \EonX\ScheduleBundle\Interfaces\TraceableScheduleInterface $schedule */
         $schedule = $this->schedule;
 
         $this->data['providers'] = [];
@@ -58,7 +58,7 @@ final class ScheduleDataCollector extends DataCollector
             $this->data['providers'][$provider]['events_count'] = \count($events);
 
             foreach ($events as $event) {
-                /** @var \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface $event */
+                /** @var \EonX\ScheduleBundle\Interfaces\EventInterface $event */
                 $this->data['events'][] = [
                     'allowsOverlapping' => $event->allowsOverlapping(),
                     'description' => $event->getDescription(),

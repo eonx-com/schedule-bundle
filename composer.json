@@ -1,5 +1,5 @@
 {
-    "name": "loyaltycorp/schedule-bundle",
+    "name": "eonx-com/schedule-bundle",
     "description": "Provides the Command Scheduling logic of Laravel in a Symfony application",
     "type": "symfony-bundle",
     "license": "MIT",
@@ -10,11 +10,11 @@
     },
     "require-dev": {
         "symfony/symfony": "^4.3",
-        "loyaltycorp/core-bundle": "^0.1"
+        "eonx-com/core-bundle": "^0.1"
     },
     "autoload": {
         "psr-4": {
-            "LoyaltyCorp\\ScheduleBundle\\": "src/"
+            "EonX\\ScheduleBundle\\": "src/"
         }
     }
 }

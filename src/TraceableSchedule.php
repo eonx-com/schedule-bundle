@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\ScheduleBundle;
+namespace EonX\ScheduleBundle;
 
-use LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface;
-use LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface;
-use LoyaltyCorp\ScheduleBundle\Interfaces\TraceableScheduleInterface;
+use EonX\ScheduleBundle\Interfaces\EventInterface;
+use EonX\ScheduleBundle\Interfaces\ScheduleInterface;
+use EonX\ScheduleBundle\Interfaces\TraceableScheduleInterface;
 use Symfony\Component\Console\Application;
 
 final class TraceableSchedule implements TraceableScheduleInterface
@@ -13,19 +13,19 @@ final class TraceableSchedule implements TraceableScheduleInterface
     /** @var string */
     private $currentProvider;
 
-    /** @var \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface */
+    /** @var \EonX\ScheduleBundle\Interfaces\ScheduleInterface */
     private $decorated;
 
-    /** @var \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface[] */
+    /** @var \EonX\ScheduleBundle\Interfaces\EventInterface[] */
     private $events = [];
 
-    /** @var \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleProviderInterface[] */
+    /** @var \EonX\ScheduleBundle\Interfaces\ScheduleProviderInterface[] */
     private $providers = [];
 
     /**
      * TraceableSchedule constructor.
      *
-     * @param \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface $decorated
+     * @param \EonX\ScheduleBundle\Interfaces\ScheduleInterface $decorated
      */
     public function __construct(ScheduleInterface $decorated)
     {
@@ -35,7 +35,7 @@ final class TraceableSchedule implements TraceableScheduleInterface
     /**
      * Add schedule providers.
      *
-     * @param \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleProviderInterface[] $providers
+     * @param \EonX\ScheduleBundle\Interfaces\ScheduleProviderInterface[] $providers
      *
      * @return self
      */
@@ -57,7 +57,7 @@ final class TraceableSchedule implements TraceableScheduleInterface
      * @param string $command
      * @param null|mixed[] $parameters
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface
      */
     public function command(string $command, ?array $parameters = null): EventInterface
     {
@@ -85,7 +85,7 @@ final class TraceableSchedule implements TraceableScheduleInterface
     /**
      * Get due events.
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface[]
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface[]
      */
     public function getDueEvents(): array
     {
@@ -95,7 +95,7 @@ final class TraceableSchedule implements TraceableScheduleInterface
     /**
      * Get events indexed by their profiler class.
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface[]
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface[]
      */
     public function getEvents(): array
     {
@@ -105,7 +105,7 @@ final class TraceableSchedule implements TraceableScheduleInterface
     /**
      * Get providers.
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleProviderInterface[]
+     * @return \EonX\ScheduleBundle\Interfaces\ScheduleProviderInterface[]
      */
     public function getProviders(): array
     {

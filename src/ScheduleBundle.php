@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\ScheduleBundle;
+namespace EonX\ScheduleBundle;
 
-use LoyaltyCorp\ScheduleBundle\DependencyInjection\Compiler\SchedulePass;
+use EonX\ScheduleBundle\DependencyInjection\Compiler\SchedulePass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

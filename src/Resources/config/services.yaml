@@ -4,17 +4,17 @@ services:
         autoconfigure: true
         public: false
 
-    LoyaltyCorp\ScheduleBundle\Command\ScheduleRunCommand: ~
+    EonX\ScheduleBundle\Command\ScheduleRunCommand: ~
 
-    LoyaltyCorp\ScheduleBundle\DataCollector\ScheduleDataCollector:
+    EonX\ScheduleBundle\DataCollector\ScheduleDataCollector:
         tags:
             -
                 name: data_collector
                 template: '@Schedule/Collector/schedule_collector.html.twig'
-                id: !php/const LoyaltyCorp\ScheduleBundle\DataCollector\ScheduleDataCollector::NAME
+                id: !php/const EonX\ScheduleBundle\DataCollector\ScheduleDataCollector::NAME
 
-    LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface:
-        class: LoyaltyCorp\ScheduleBundle\Schedule
+    EonX\ScheduleBundle\Interfaces\ScheduleInterface:
+        class: EonX\ScheduleBundle\Schedule
 
-    LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleRunnerInterface:
-        class: LoyaltyCorp\ScheduleBundle\ScheduleRunner
+    EonX\ScheduleBundle\Interfaces\ScheduleRunnerInterface:
+        class: EonX\ScheduleBundle\ScheduleRunner

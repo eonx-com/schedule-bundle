@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\ScheduleBundle;
+namespace EonX\ScheduleBundle;
 
 use Exception;
-use LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface;
+use EonX\ScheduleBundle\Interfaces\EventInterface;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputInterface;
@@ -61,7 +61,7 @@ final class Event extends AbstractEvent
      *
      * @param callable $func
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface
      */
     public function before(callable $func): EventInterface
     {
@@ -133,7 +133,7 @@ final class Event extends AbstractEvent
      *
      * @param null|bool $allowOverlapping
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface
      */
     public function setAllowOverlapping(?bool $allowOverlapping = null): EventInterface
     {
@@ -147,7 +147,7 @@ final class Event extends AbstractEvent
      *
      * @param float $seconds
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface
      */
     public function setMaxLockTime(float $seconds): EventInterface
     {
@@ -161,7 +161,7 @@ final class Event extends AbstractEvent
      *
      * @param callable $func
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface
      */
     public function then(callable $func): EventInterface
     {

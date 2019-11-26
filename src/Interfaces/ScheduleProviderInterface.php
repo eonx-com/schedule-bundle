@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\ScheduleBundle\Interfaces;
+namespace EonX\ScheduleBundle\Interfaces;
 
 interface ScheduleProviderInterface
 {
@@ -11,7 +11,7 @@ interface ScheduleProviderInterface
     /**
      * Schedule command on given schedule.
      *
-     * @param \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleInterface $schedule
+     * @param \EonX\ScheduleBundle\Interfaces\ScheduleInterface $schedule
      *
      * @return void
      */

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\ScheduleBundle\Interfaces;
+namespace EonX\ScheduleBundle\Interfaces;
 
 use Symfony\Component\Console\Application;
 
@@ -10,7 +10,7 @@ interface ScheduleInterface
     /**
      * Add schedule providers.
      *
-     * @param \LoyaltyCorp\ScheduleBundle\Interfaces\ScheduleProviderInterface[] $providers
+     * @param \EonX\ScheduleBundle\Interfaces\ScheduleProviderInterface[] $providers
      *
      * @return self
      */
@@ -22,7 +22,7 @@ interface ScheduleInterface
      * @param string $command
      * @param null|mixed[] $parameters
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface
      */
     public function command(string $command, ?array $parameters = null): EventInterface;
 
@@ -36,7 +36,7 @@ interface ScheduleInterface
     /**
      * Get due events.
      *
-     * @return \LoyaltyCorp\ScheduleBundle\Interfaces\EventInterface[]
+     * @return \EonX\ScheduleBundle\Interfaces\EventInterface[]
      */
     public function getDueEvents(): array;
 
