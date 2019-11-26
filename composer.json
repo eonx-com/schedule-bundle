@@ -10,7 +10,7 @@
     },
     "require-dev": {
         "symfony/symfony": "^4.3",
-        "eonx-com/core-bundle": "^1.0"
+        "eonx-com/core-bundle": "^1.1"
     },
     "autoload": {
         "psr-4": {
